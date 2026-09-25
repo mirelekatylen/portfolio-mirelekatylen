@@ -1,0 +1,60 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F7F4;
+    color: #1E2F35;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    background-color: #123c43;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 24PX;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a{
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* SEÇÕES */
+section {
+    padding: 100px 8%;
+    min-height: 60vh;
+}
+
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 30px;
+}
