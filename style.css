@@ -93,21 +93,13 @@ SOBRE MIM
 */
 #sobre {
     background-color: #F7F7F4;
+    padding: 110px 8%;
 }
 
-#sobre h2{
-    font-size: 32px;
-    margin-bottom: 28px;
-    color: #123C43;
+.sobre-introducao {
+    max-width: 900px;
+    margin-top: ;
 }
-
-#sobre p {
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 20px;
-    max-width: 820px;
-}
-
 /*
 ===========================================
 CONHECIMENTOS
