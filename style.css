@@ -93,13 +93,79 @@ SOBRE MIM
 */
 #sobre {
     background-color: #F7F7F4;
-    padding: 110px 8%;
+    padding: 80px 8%;
 }
 
 .sobre-introducao {
     max-width: 900px;
-    margin-top: ;
+    margin-top: 0;
+    margin-bottom: 55px;
 }
+
+.sobre-etiqueta {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #9B7A3C;
+    margin-bottom: 24px;
+}
+
+#sobre .sobre-introducao h2 {
+    font-size: 58px;
+    line-height: 1.12;
+    color: #123C43;
+    margin-bottom: 18px;
+    letter-spacing: -1.5px;
+}
+
+#sobre .sobre-destaque {
+    max-width: 680px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #526266;
+    margin-bottom: 0
+}
+
+.sobre-trajetoria {
+    max-width: 1050px;
+    margin: 0 auto;
+    border-top: 1px solid #D8DEDA;
+}
+
+.etapa-trajetoria {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: 1px solid #D8DEDA;
+}
+
+.numero-etapa {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #B18A49;
+    padding-top: 5px;
+}
+
+.etapa-trajetoria h3 {
+    font-size: 24px;
+    color: #123C43;
+    margin-bottom: 14px;
+}
+
+#sobre .etapa-trajetoria p {
+    max-width: 760px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #34464B;
+    margin-bottom: 12px;
+}
+
+#sobre .etapa-trajetoria p:last-child {
+    margin-bottom: 0;
+}
+
 /*
 ===========================================
 CONHECIMENTOS
@@ -286,6 +352,33 @@ FORMAÇÃO E CURSOS
 .item-formacao li {
     padding-left: 4px;
 }
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 24px;
+}
+
+/*ANIMAÇÃO*/
+.grupo-habilidades {
+    margin-bottom: 0;
+    padding: 24px;
+    border: 1px solid #DCE4E3;
+    border-radius: 12px;
+    background-color: #F7F7F4;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.grupo-habilidades:hover {
+    transform: translateY(-4px);
+    border-color: #9B7A3C;
+    box-shadow: 0 10px 28px rgba(18, 60, 67, 0.07);
+}
+
+
+
+
 /*
 ===========================================
 CONTATO
