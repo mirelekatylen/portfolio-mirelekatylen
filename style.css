@@ -37,6 +37,14 @@ nav a{
     margin-left: 20px;
 }
 
+/* TIPOGRAFIA */
+:root {
+    --fonte-principal: 'DM Sans', sans-serif;
+    --fonte-editorial: 'Cormorant Garamond', serif;
+    --fonte-tecnica: 'Space Mono', monospace;
+}
+
+
 /* SEÇÕES */
 section {
     padding: 100px 8%;
@@ -57,6 +65,11 @@ INÍCIO
     background-position: center;
     color: #FFFFFF;
 }
+#inicio .identidade {
+    font-family: var(--fonte-tecnica);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
 
 .conteudo-inicio {
     max-width: 650px;
@@ -71,16 +84,23 @@ INÍCIO
 }
 
 #inicio h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
+    font-family: var(--fonte-editorial);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.05;
 }
 
 #inicio h2 {
-    font-size: 30px;
-    font-weight: normal;
-    margin-bottom: 20px;
+    font-family: var(--fonte-editorial);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
 }
 
+#inicio .descricao {
+    font-family: var(--fonte-principal);
+    font-size: 17px;
+}
 .descricao {
     font-size: 18px;
     line-height: 1.6;
@@ -93,35 +113,38 @@ SOBRE MIM
 */
 #sobre {
     background-color: #F7F7F4;
-    padding: 80px 8%;
+    padding: 100px 8%;
 }
 
 .sobre-introducao {
     max-width: 900px;
-    margin-top: 0;
-    margin-bottom: 55px;
+    margin: 0 0 65px;
 }
 
 .sobre-etiqueta {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
+    font-family: var(--fonte-tecnica);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
     color: #9B7A3C;
     margin-bottom: 24px;
 }
 
 #sobre .sobre-introducao h2 {
-    font-size: 58px;
-    line-height: 1.12;
+    font-family: var(--fonte-editorial);
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.05;
     color: #123C43;
-    margin-bottom: 18px;
-    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+    letter-spacing: -1px;
 }
 
 #sobre .sobre-destaque {
     max-width: 680px;
-    font-size: 20px;
-    line-height: 1.7;
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    line-height: 1.8;
     color: #526266;
     margin-bottom: 0
 }
@@ -141,28 +164,67 @@ SOBRE MIM
 }
 
 .numero-etapa {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    font-family: var(--fonte-tecnica);
+    font-size: 13px;
     color: #B18A49;
     padding-top: 5px;
 }
 
 .etapa-trajetoria h3 {
-    font-size: 24px;
+    font-family: var(--fonte-principal);
+    font-size: 21px;
+    font-weight: 600;
     color: #123C43;
     margin-bottom: 14px;
 }
 
 #sobre .etapa-trajetoria p {
     max-width: 760px;
-    font-size: 16px;
-    line-height: 1.8;
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    line-height: 1.9;
     color: #34464B;
     margin-bottom: 12px;
 }
 
 #sobre .etapa-trajetoria p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-forma-pensar {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: none;
+}
+
+.forma-pensar-etiqueta {
+    font-family: var(--fonte-tecnica);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #9B7A3C;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.sobre-forma-pensar h3 {
+    font-family: var(--fonte-principal);
+    font-size: 21px;
+    font-weight: 600;
+    color: #123C43;
+    margin-bottom: 14px;
+}
+
+.sobre-forma-pensar p:not(.forma-pensar-etiqueta) {
+    max-width: 760px;
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    line-height: 1.9;
+    color: #34464B;
     margin-bottom: 0;
 }
 
@@ -173,16 +235,21 @@ CONHECIMENTOS
 */
 #habilidades {
     background-color: #FFFFFF;
+    padding: 100px 8%;
 }
 
 #habilidades h2 {
-    font-size: 32px;
+    font-family: var(--fonte-editorial);
+    font-size: 48px;
+    font-weight: 500;
     color: #123C43;
     margin-bottom: 12px;
 }
 
 #habilidades > .descricao {
-    margin-bottom: 35px;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    margin-bottom: 42px;
     color: #52636A;
 }
 
@@ -387,38 +454,70 @@ CONTATO
 #contato {
     background-color: #123C43;
     color: #FFFFFF;
+    padding: 100px 8%;
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+}
+
+#contato::before {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    background-color: #B18A49;
+    margin-bottom: 28px;
 }
 
 #contato h2 {
-    font-size: 32px;
-    margin-bottom: 24px;
+    max-width: 700px;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
 }
 
 #contato p {
+    max-width: 620px;
     font-size: 16px;
-    margin-bottom: 14px;
+    line-height: 1.8;
+    color: #E0E9E7;
+    margin-bottom: 24px;
 }
 
 /* LINKS CONTATOS */
 .links-contato {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-bottom: 28px;
+    gap: 12px;
+    margin-top: 28px;
+    margin-bottom: 0;
 }
 
 .links-contato a {
     display: inline-block;
+    align-items: center;
+    justify-content: center;
     padding: 12px 20px;
-    border: 1px solid #FFFFFF;
-    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 4px;
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 15px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
 }
 
 .links-contato a:hover {
     background-color: #FFFFFF;
+    border-color: #FFFFFF;
     color: #123C43;
+    transform: translateY(-2px);
+}
+
+.links-contato a:focus-visible {
+    outline: 2px solid #B18A49;
+    outline-offset: 4px;
 }
